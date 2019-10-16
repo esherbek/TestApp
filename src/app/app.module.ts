@@ -18,6 +18,8 @@ import { TopBarComponent } from './top-bar/top-bar.component'
 import { RouterModule } from '@angular/router';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     TopBarComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
+    CartComponent,
     
   
   ],
@@ -44,9 +47,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     MatMenuModule,
     MatIconModule,
     LayoutModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent}
+      { path: 'products/:productId', component: ProductDetailsComponent},
+      { path: 'cart', component: CartComponent},
     ])
   ],
   providers: [],
