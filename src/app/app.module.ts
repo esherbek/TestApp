@@ -19,7 +19,8 @@ import { RouterModule } from '@angular/router';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ShippingComponent } from './shipping/shipping.component'
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http'
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
+    ShippingComponent,
     
   
   ],
@@ -52,6 +54,7 @@ import { HttpClientModule } from '@angular/common/http'
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent},
       { path: 'cart', component: CartComponent},
+      { path: 'shipping', component: ShippingComponent},
     ])
   ],
   providers: [],
